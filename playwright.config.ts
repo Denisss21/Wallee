@@ -26,7 +26,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
      baseURL: 'https://magento-2.showcase-wallee.com/',
-    headless: false,
+    headless: true,
   
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
