@@ -1,25 +1,20 @@
-# 🧪 UI Automation Testing for Wallee Shop
-
-## 📖 Project Overview
-
-This repository contains **end-to-end UI automated tests** for the [Magento 2](https://magento-2.showcase-wallee.com) and [WooCommerce](https://woocommerce.showcase-wallee.com) demo shops provided by Wallee.  
-Tests are written using **[Playwright](https://playwright.dev/)** in **TypeScript** and cover key user flows like account creation, login, cart actions, and checkout.
-
----
+# 🧪 UI Automation Testing
 
 ## 📂 Project Structure
 
+```text
 📦 Wallee/
-├── 📂 tests/ # UI test specs
-├── 📂 pageObjects/ # Page Object Models (POMs)
-├── 📂 data/ # Test data (e.g., generated user info)
-├── 📂 utils/ # Helpers, constants, etc.
-├── 📂 fixtures/ # Optional test fixtures
-├── 🛠 playwright.config.ts # Playwright configuration
-├── 📄 Dockerfile # Docker setup for test execution
-├── 📄 README.md # Project documentation
+├── 📂 circle/config.yml   # Config for CI 
+├── 📂 constants           # Constants
+├── 📂 tests/              # UI test specs
+├── 📂 pageObjects/        # Page Object Models (POMs)
+├── 📂 utils/              # Helpers, constants, etc.
+├── 📂 fixtures/           # Optional test fixtures
+├── 🛠  playwright.config.ts  # Playwright configuration
+├── 📄 README.md           # Project documentation
 
 
+```
 ---
 
 ## 🛠 Prerequisites
@@ -29,7 +24,6 @@ Make sure you have installed:
 - [Node.js](https://nodejs.org/) (v18 or later)
 - [npm](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
-- (Optional) [Docker](https://www.docker.com/)
 
 ---
 
