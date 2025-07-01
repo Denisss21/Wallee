@@ -23,7 +23,7 @@ jobs:
 
       - run:
           name: Show test report location
-          command: echo "Open the report with: npx playwright show-report"
+          command: 'echo "Open the report with: npx playwright show-report"'
 
       - store_artifacts:
           path: playwright-report
