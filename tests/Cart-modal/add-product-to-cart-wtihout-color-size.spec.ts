@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
-import { BasePage } from '../../pageObject/BasePage';
-import { ProductDetailPage } from '../../pageObject/ProductPage/ProductDetailPage';
+import { BasePage } from '../../pageObjects/BasePage';
+import { ProductDetailPage } from '../../pageObjects/ProductPage/ProductDetailPage';
 import { ATTRIBUTE_IDS } from '../../constant/CONSTANT_FIELDS_ATTRIBUTE_ID';
 
 test.describe('Add product to cart flow', () => {
