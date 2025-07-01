@@ -17,7 +17,7 @@ export class BasePage {
         this.itemsInCart = page.locator('.counter-number');
         this.cartIcon = page.locator('.action.showcart')
         this.successMessage = page.locator('div.message-success');
-        this.loggedInMessage = page.locator('.logged-in').first();
+        this.loggedInMessage = page.locator('.welcome .logged-in').first();
         this.errorMessage = page.locator('.message-error');
     }
 
@@ -47,9 +47,5 @@ export class BasePage {
 
     async validateThankYouForRegistrationMessage() {
         await expect(this.successMessage).toHaveText('Thank you for registering with Main Website Store.')
-    }
-
-    async validateOrderInformation() {
-        
     }
 }
