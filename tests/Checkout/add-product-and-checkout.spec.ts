@@ -4,7 +4,7 @@ import { CartModal } from '../../pageObjects/Cart/CartModal';
 import { ShippingPage } from '../../pageObjects/Checkout/ShippingPage';
 import { ProductDetailPage } from '../../pageObjects/ProductPage/ProductDetailPage';
 import { generateUserInfo } from '../../utils/GenerateUserInfo';
-import { mailslurp } from '../../utils/mailsurp';
+import { mailslurp } from '../../utils/Mailsurp';
 import { ReviewPaymentsPage } from '../../pageObjects/Checkout/ReviewPaymentsPage';
 import { PAYMENT_METHODS } from '../../constant/CONSTANT_PAYMENT_METHODS';
 import { SHIPPING_METHODS } from '../../constant/CONSTANT_SHIPPING_METHODS';
