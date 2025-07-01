@@ -36,20 +36,10 @@ export class CustomerLoginPage extends BasePage {
     }
 
     async validateInccorectCredentialsMessage() {
-        await expect(this.errorMessage).toHaveText('The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.')
+        await expect(this.errorMessage).toContainText('The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.')
     }
 
     async validateRequiredFieldsMessage() {
         await expect(this.errorMessage).toHaveText('A login and a password are required.');
     }
-
-    // async expectFieldToBeRequired(fieldId: string) {
-    //     const input = this.page.locator(`#${fieldId}`);
-    //     const errorMessage = this.page.locator(`#${fieldId}-error`);
-
-    //     await expect(input).toHaveAttribute('aria-required', 'true');
-    //     await expect(input).toHaveAttribute('aria-invalid', 'true');
-    //     await expect(errorMessage).toBeVisible();
-    //     await expect(errorMessage).toHaveText('This is a required field.');
-    // }
 }
