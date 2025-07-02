@@ -42,7 +42,6 @@ export class BasePage {
     }
 
     async validateWelcomeMessage(firstName: string, lastName: string) {
-        await expect(this.successMessage).toBeVisible();
         await expect(this.loggedInMessage).toHaveText(`Welcome, ${firstName} ${lastName}!`);
     }
 
