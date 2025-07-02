@@ -17,7 +17,7 @@ export class BasePage {
         this.itemsInCart = page.locator('.counter-number');
         this.cartIcon = page.locator('.action.showcart')
         this.successMessage = page.locator('div.message-success');
-        this.loggedInMessage = page.locator('.panel  .logged-in').first();
+        this.loggedInMessage = page.locator('.panel .welcome');
         this.errorMessage = page.locator('.message-error');
     }
 
