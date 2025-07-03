@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { CustomerLoginPage } from '../../pageObjects/Authentication/CustomerLoginPage';
 
-test.describe('Create new account', () => {
+test.describe('Validate user can sign in', () => {
     let customerLoginPage: CustomerLoginPage;
 
     test.beforeEach(async ({ page, baseURL }) => {
@@ -9,8 +9,8 @@ test.describe('Create new account', () => {
         await page.goto('/customer/account/login');
     });
 
-    test('Validate the user can create a new account', async () => {
+    test('Sign in with valid credentials', async () => {
         await customerLoginPage.loginAsUser();
-        await customerLoginPage.validateWelcomeMessage('Admin', 'Admin');
+        await customerLoginPage.validateDefaultWelcomeMessage();
     });
 });

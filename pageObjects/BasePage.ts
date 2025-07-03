@@ -9,6 +9,7 @@ export class BasePage {
     readonly successMessage: Locator;
     readonly loggedInMessage: Locator;
     readonly errorMessage: Locator;
+    readonly defaultMessage: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -17,7 +18,7 @@ export class BasePage {
         this.itemsInCart = page.locator('.counter-number');
         this.cartIcon = page.locator('.action.showcart')
         this.successMessage = page.locator('div.message-success');
-        this.loggedInMessage = page.locator('.panel .welcome');
+        this.loggedInMessage = page.locator('.panel .welcome').last();
         this.errorMessage = page.locator('.message-error');
     }
 
@@ -43,6 +44,10 @@ export class BasePage {
 
     async validateWelcomeMessage(firstName: string, lastName: string) {
         await expect(this.loggedInMessage).toContainText(`Welcome, ${firstName} ${lastName}!`);
+    }
+
+    async validateDefaultWelcomeMessage() {
+        await expect(this.loggedInMessage).toContainText(`Default welcome msg!`);
     }
 
     async validateThankYouForRegistrationMessage() {
